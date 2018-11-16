@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>获取地址栏参数</title>
+	<script type="text/javascript">
+		function parseUrl(searchURL){
+			searchURL = searchURL.substring(1, searchURL.length);
+		    var splits = searchURL.split("&");
+		    kvs={};//这里kvs=[]也行
+		    for (var i = splits.length - 1; i >= 0; i--) {
+    			kv=splits[i].split("=");
+    			kvs[kv[0]]=kv[1];
+    		}
+    		return kvs;
+		}
+		var searchURL = window.location.search;
+		var paras=parseUrl(searchURL);
+		// 比如我想获取key1,key2,key3的值
+		alert("key1:"+paras["key1"]+",key2:"+paras["key2"]+",key3:"+paras["key3"])
+	</script>
+</head>
+<body>
+	
+</body>
+</html>

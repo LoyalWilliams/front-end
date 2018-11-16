@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>test</title>
+	<script type="text/javascript">
+var searchURL = window.location.search;
+var paras=parseUrl(searchURL);
+var key=paras["key"];
+function parseUrl(searchURL){
+	searchURL = searchURL.substring(1, searchURL.length);
+    var splits = searchURL.split("&");
+    kvs={};
+    for (var i = splits.length - 1; i >= 0; i--) {
+    	kv=splits[i].split("=");
+    	kvs[kv[0]]=kv[1];
+    }
+    return kvs;
+}
+alert(key);
+
+		window.onload=function() {
+		 // 网页可见区域宽
+		  console.log(document.body.clientWidth );
+		  // 网页可见区域高
+          console.log(document.body.clientHeight);
+          // 网页可见区域宽
+          console.log(document.body.offsetWidth );//(包括边线的宽)
+          // 网页可见区域高
+          console.log(document.body.offsetHeight); //(包括边线的高)
+          // 网页正文全文宽
+          console.log(document.body.scrollWidth );
+          // 网页正文全文高
+          console.log(document.body.scrollHeight);
+          // 网页被卷去的高
+          console.log(document.body.scrollTop   );
+          // 网页被卷去的左
+          console.log(document.body.scrollLeft  );
+          // 网页正文部分上
+          console.log(window.screenTop          );
+          // 网页正文部分左
+          console.log(window.screenLeft         );
+          // 屏幕物理分辨率的高
+          console.log(window.screen.height      );
+          // 屏幕物理分辨率的宽
+          console.log(window.screen.width       );
+          // 屏幕可用工作区高度
+          console.log(window.screen.availHeight );
+          // 屏幕可用工作区宽度
+          console.log(window.screen.availWidth  );
+          // 屏幕缩放因子
+          console.log(window.devicePixelRatio  );
+		}
+		
+	</script>
+	<style type="text/css">
+		.picTop{
+			height: 35px;
+			width: 42px;
+			margin: 0px auto;
+			background: url(D:/code/html/topback.png);
+			cursor: pointer;
+		}
+		.picTop:hover{
+			background: url(D:/code/html/topback.png) -42px 0px no-repeat;
+		}
+		.picBottom{
+			cursor: pointer;
+			height: 35px;
+			width: 42px;
+			margin: 0px auto;
+			background: url(D:/code/html/topback.png) 0px -35px no-repeat;
+		}
+		.picBottom:hover{
+			background: url(D:/code/html/topback.png) -42px -35px no-repeat;
+		}
+	</style>
+</head>
+<body>
+	<div class="picTop">
+	</div>
+	<div class="picBottom">
+	</div>
+	
+</body>
+</html>
